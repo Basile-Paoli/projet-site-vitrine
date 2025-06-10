@@ -11,5 +11,6 @@ export default [
     route("sessions/:id", "routes/session.tsx"),
     route("reservation", "routes/reservation.tsx"),
     route("contact", "routes/contact.tsx"),
+    route("mentions-legales", "routes/mentions-legales.tsx"),
   ]),
 ] satisfies RouteConfig;
