@@ -20,16 +20,7 @@ export default function Contact() {
         }
     });
 
-    const inputStyle = {
-        width: "100%",
-        border: "1px solid #ccc",
-        borderRadius: 4,
-        padding: "8px",
-        boxSizing: "border-box" as const,
-    };
-
     const onSubmit = async (data: FormData) => {
-        console.log(data);
         try {
             const response = await fetch("http://localhost:8080/api", {
                 method: "POST",
@@ -49,37 +40,30 @@ export default function Contact() {
     return (
         <form
             onSubmit={handleSubmit(onSubmit)}
-            style={{
-                maxWidth: 1500,
-                margin: "0 auto",
-                display: "flex",
-                flexDirection: "column",
-                gap: 16,
-                alignItems: "center"
-            }}
+            className="max-w-[1500px] mx-auto flex flex-col gap-4 items-center"
         >
-            <label>
+            <label className="w-full max-w-[1500px]">
                 Email :
                 <input
                     type="email"
                     {...register("email", { required: "L'email est requis" })}
-                    style={inputStyle}
+                    className="w-full border border-gray-300 rounded px-2 py-2 box-border"
                 />
-                {errors.email && <span style={{ color: "red" }}>{errors.email.message}</span>}
+                {errors.email && <span className="text-red-600">{errors.email.message}</span>}
             </label>
-            <label>
+            <label className="w-full max-w-[1500px]">
                 Objet :
                 <select
                     {...register("subject", { required: "L'objet est requis" })}
-                    style={inputStyle}
+                    className="w-full border border-gray-300 rounded px-2 py-2 box-border"
                 >
                     <option value="support">Support</option>
                     <option value="feedback">Retour</option>
                     <option value="other">Autre</option>
                 </select>
-                {errors.subject && <span style={{ color: "red" }}>{errors.subject.message}</span>}
+                {errors.subject && <span className="text-red-600">{errors.subject.message}</span>}
             </label>
-            <label>
+            <label className="w-full max-w-[1500px]">
                 Message :
                 <textarea
                     {...register("content", {
@@ -87,13 +71,13 @@ export default function Contact() {
                         minLength: { value: 20, message: "Minimum 20 caractères" }
                     })}
                     rows={24}
-                    style={{ ...inputStyle, width: "100vw", maxWidth: 1500 }}
+                    className="w-screen max-w-[1500px] border border-gray-300 rounded px-2 py-2 box-border"
                 />
-                {errors.content && <span style={{ color: "red" }}>{errors.content.message}</span>}
+                {errors.content && <span className="text-red-600">{errors.content.message}</span>}
             </label>
             <button
                 type="submit"
-                style={{ border: "2px solid #007bff", borderRadius: 4, maxWidth: "300px" }}
+                className="border-2 border-blue-600 rounded max-w-[300px] px-4 py-2 text-blue-700 font-semibold hover:bg-blue-50"
             >
                 Envoyer
             </button>
