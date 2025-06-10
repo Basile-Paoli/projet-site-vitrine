@@ -9,7 +9,7 @@
         "description": "Vous êtes un groupe d’aventuriers parti à la recherche d’explorateurs perdus dans une vieille mine. Plongez dans une aventure pleine de mystère et de rebondissements, où chaque corridor obscur et chaque énigme dévoilée vous rapproche d'un secret enfoui depuis des siècles. Préparez-vous à marcher sur les traces du passé dans un univers où l'inattendu se cache derrière chaque ombre.",
         "ageMini": "14 ans",
         "tempsLimite": "75 minutes",
-        "photos": []
+        "photos": ["https://lockacademy.com/wp-content/uploads/lock-image-salle-accueil-ucpp.webp"]
     },
     {
         "id": 2,

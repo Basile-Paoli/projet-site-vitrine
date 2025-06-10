@@ -32,7 +32,7 @@ function SessionDropdown() {
 
   const links = sessions.map((session) => ({
     name: session.nom,
-    path: `/session/${session.id}`,
+    path: `/sessions/${session.id}`,
   }));
   return (
     <div className="relative">
