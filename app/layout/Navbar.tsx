@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { NavLink, useLocation } from "react-router";
+import sessions from "../datas/sessions.json";
 
 const linkStyles = ({ isActive }: { isActive: boolean }) =>
   "cursor-pointer px-3 py-2 rounded transition-colors duration-200 " +
@@ -27,11 +28,12 @@ function SessionDropdown() {
   const toggleDropdown = () => setIsOpen(!isOpen);
   const location = useLocation();
   const isActive = (path: string) => location.pathname === path;
-  const sessions = [
-    { name: "session1", path: "/session/login" },
-    { name: "session2", path: "/session/register" },
-  ];
   const isInSessionPage = location.pathname.startsWith("/session");
+
+  const links = sessions.map((session) => ({
+    name: session.nom,
+    path: `/session/${session.id}`,
+  }));
   return (
     <div className="relative">
       <button
@@ -43,16 +45,15 @@ function SessionDropdown() {
       {isOpen && (
         <div className="absolute right-0 mt-2 w-20 min-w-fit bg-white border rounded shadow-lg">
           <ul className="py-1">
-            {sessions.map((session) => (
-              <li key={session.name}>
+            {links.map((link) => (
+              <li key={link.name}>
                 <NavLink
-                  to={session.path}
-                  className={
-                    linkStyles({ isActive: isActive(session.path) }) +
-                    " block px-4 py-2"
+                  to={link.path}
+                  className={({ isActive }) =>
+                    linkStyles({ isActive }) + " block px-4 py-2"
                   }
                 >
-                  {session.name}
+                  {link.name}
                 </NavLink>
               </li>
             ))}
