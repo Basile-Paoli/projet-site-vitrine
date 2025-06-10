@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router";
 import sessions from "../datas/sessions.json";
 
@@ -9,7 +9,7 @@ const linkStyles = ({ isActive }: { isActive: boolean }) =>
 export function Navbar() {
   return (
     <header className="flex items-center p-4 justify-between w-full bg-gray-200 border-b">
-      <div className="break-words w-32">LA MAISON HORRIFIQUE</div>
+      <NavLink to="/" className="break-words w-32">LA MAISON HORRIFIQUE</NavLink>
       <div className="flex items-center gap-4">
         <SessionDropdown />
         <NavLink to="/reservation" className={linkStyles}>
@@ -34,6 +34,9 @@ function SessionDropdown() {
     name: session.nom,
     path: `/sessions/${session.id}`,
   }));
+
+  useEffect(() => setIsOpen(false), [location]);
+
   return (
     <div className="relative">
       <button

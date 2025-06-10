@@ -1,4 +1,3 @@
-import { Navbar } from "~/layout/Navbar";
 import sessions from "../datas/sessions.json";
 import { SessionCard } from "./SessionCard";
 
