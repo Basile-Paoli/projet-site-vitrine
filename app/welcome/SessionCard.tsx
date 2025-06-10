@@ -26,9 +26,10 @@ export function SessionCard({ session }: { session: Session }) {
       <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
         {session.photos.map((photo, index) => (
           <img
-            key={index}
-            src={photo}
-            className="w-full h-auto max-h-[300px] rounded-md"
+              alt={`Photo ${index + 1} de la session ${session.nom}`}
+              key={index}
+              src={photo}
+              className="w-full h-auto max-h-[300px] rounded-md"
           />
         ))}
       </div>
