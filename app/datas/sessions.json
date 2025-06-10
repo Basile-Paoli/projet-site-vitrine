@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "nom": "Mystère de Minuit",
+        "genre": "Suspens",
+        "difficulte": "expérimenté",
+        "nombreJoueurs": "3 à 6",
+        "langue": "Français",
+        "description": "Vous êtes un groupe d’aventuriers parti à la recherche d’explorateurs perdus dans une vieille mine. Plongez dans une aventure pleine de mystère et de rebondissements, où chaque corridor obscur et chaque énigme dévoilée vous rapproche d'un secret enfoui depuis des siècles. Préparez-vous à marcher sur les traces du passé dans un univers où l'inattendu se cache derrière chaque ombre.",
+        "ageMini": "14 ans",
+        "tempsLimite": "75 minutes",
+        "photos": []
+    },
+    {
+        "id": 2,
+        "nom": "Terreur au Manoir",
+        "genre": "Horreur",
+        "difficulte": "expert",
+        "nombreJoueurs": "2 à 5",
+        "langue": "Français",
+        "description": "Imaginez-vous pénétrer dans l’antre d’un vieux manoir où les murs murmurent des histoires d’horreur. Vous et votre équipe devrez résoudre d’anciens mystères et affronter des peurs indicibles, tout en explorant des pièces secrètes et des passages oubliés. Cette aventure vous entraînera dans un récit riche en tension et en surprises, où le danger guette à chaque coin sombre.",
+        "ageMini": "14 ans",
+        "tempsLimite": "60 minutes",
+        "photos": []
+    },
+    {
+        "id": 3,
+        "nom": "Chuchotements Nocturnes",
+        "genre": "Peur/Suspens",
+        "difficulte": "Tous niveaux",
+        "nombreJoueurs": "2 à 6",
+        "langue": "Français",
+        "description": "Dans cette aventure mêlant frissons et mystère, vous explorerez des lieux où les ténèbres semblent prendre vie et les chuchotements vous guident vers l’inconnu. Chaque pas dans cette histoire vous conduit plus près de la vérité cachée derrière de vieilles légendes, faisant de chaque instant un défi tant pour le courage que pour l’esprit. Préparez-vous à découvrir des secrets qui défient l’imagination.",
+        "ageMini": "14 ans",
+        "tempsLimite": "90 minutes",
+        "photos": []
+    },
+    {
+        "id": 4,
+        "nom": "Labyrinthe Énigmatique",
+        "genre": "Suspens",
+        "difficulte": "expert",
+        "nombreJoueurs": "2 à 5",
+        "langue": "Français",
+        "description": "Vous voilà embarqués dans un labyrinthe où chaque détour recèle une énigme et chaque mur cache un indice menant à un trésor oublié. L'ambiance mystérieuse et les pièges ingénieux vous feront vivre une aventure captivante, où la ruse et la coopération sont la clé pour déchiffrer le chemin de la vérité. Laissez-vous emporter dans une quête pleine de rebondissements et de mystères anciens.",
+        "ageMini": "14 ans",
+        "tempsLimite": "60 minutes",
+        "photos": []
+    },
+    {
+        "id": 5,
+        "nom": "Ombres de la Nuit",
+        "genre": "Horreur",
+        "difficulte": "expérimenté",
+        "nombreJoueurs": "3 à 6",
+        "langue": "Français",
+        "description": "Partez à l'aventure dans une nuit sombre où les ombres prennent vie et racontent des récits terrifiants. Votre groupe d’aventuriers devra surmonter des épreuves effrayantes et affronter des forces mystérieuses errant dans des lieux oubliés depuis longtemps. Entre suspens et terreur, chaque pas vous rapproche de vérités troublantes et de dangers insoupçonnés.",
+        "ageMini": "14 ans",
+        "tempsLimite": "75 minutes",
+        "photos": []
+    }
+]
