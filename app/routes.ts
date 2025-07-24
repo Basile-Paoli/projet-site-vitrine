@@ -13,5 +13,6 @@ export default [
     route("contact", "routes/contact.tsx"),
     route("mentions-legales", "routes/mentions-legales.tsx"),
     route("gestion-employes", "routes/gestion-employes.tsx"),
+    route("gestion-sessions", "routes/gestion-sessions.tsx"),
   ]),
 ] satisfies RouteConfig;
