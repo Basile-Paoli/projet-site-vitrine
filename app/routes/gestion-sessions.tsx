@@ -127,37 +127,49 @@ const GestionSessions = () => {
         Gestion des sessions
       </h2>
       <form onSubmit={handleSubmit} className="mb-8 flex flex-col gap-2">
-        <input
-          name="theme"
-          placeholder="Thème"
-          value={form.theme}
-          onChange={handleChange}
-          className={inputStyle}
-        />
-        <input
-          name="duree"
-          type="number"
-          placeholder="Durée (min)"
-          value={form.duree}
-          onChange={handleChange}
-          className={inputStyle}
-        />
-        <input
-          name="prix"
-          type="number"
-          placeholder="Prix (€)"
-          value={form.prix}
-          onChange={handleChange}
-          className={inputStyle}
-        />
-        <input
-          name="nbParticipantsMin"
-          type="number"
-          placeholder="Participants min."
-          value={form.nbParticipantsMin}
-          onChange={handleChange}
-          className={inputStyle}
-        />
+        <label>
+          Nom
+          <input
+            name="theme"
+            placeholder="Nom de la session"
+            value={form.theme}
+            onChange={handleChange}
+            className={inputStyle}
+          />
+        </label>
+        <label>
+          Durée (en minutes)
+          <input
+            name="duree"
+            type="number"
+            placeholder="Durée (min)"
+            value={form.duree}
+            onChange={handleChange}
+            className={inputStyle}
+          />
+        </label>
+        <label>
+          Prix (en euros)
+          <input
+            name="prix"
+            type="number"
+            placeholder="Prix (€)"
+            value={form.prix}
+            onChange={handleChange}
+            className={inputStyle}
+          />
+        </label>
+        <label>
+          Nombre de participants minimum
+          <input
+            name="nbParticipantsMin"
+            type="number"
+            placeholder="Participants min."
+            value={form.nbParticipantsMin}
+            onChange={handleChange}
+            className={inputStyle}
+          />
+        </label>
         <label>Créneaux disponibles :</label>
         {form.creneaux.map((cr, idx) => (
           <div key={idx} className="flex gap-2 mb-1">

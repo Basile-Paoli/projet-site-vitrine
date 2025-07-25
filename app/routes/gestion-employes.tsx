@@ -6,8 +6,9 @@ const employeeApiUrl = "http://localhost:8080/employees";
 
 const getEmployees = async (): Promise<Employee[]> => {
   const response = await fetch(employeeApiUrl);
-  if (!response.ok) throw new Error("Erreur lors de la récupération des employés");
-  return await response.json() as Employee[];
+  if (!response.ok)
+    throw new Error("Erreur lors de la récupération des employés");
+  return (await response.json()) as Employee[];
 };
 
 const addEmployee = async (employee: { name: string; role: string }) => {
@@ -70,22 +71,28 @@ const EmployeeManagement = () => {
       </h2>
       <div className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-md p-6 rounded-xl mb-8">
         <form onSubmit={handleAdd} className="flex flex-col gap-4">
-          <input
-            className={inputStyle}
-            type="text"
-            name="name"
-            placeholder="Nom"
-            value={form.name}
-            onChange={handleChange}
-          />
-          <input
-            className={inputStyle}
-            type="text"
-            name="role"
-            placeholder="Rôle"
-            value={form.role}
-            onChange={handleChange}
-          />
+          <label>
+            Nom
+            <input
+              className={inputStyle}
+              type="text"
+              name="name"
+              placeholder="Nom"
+              value={form.name}
+              onChange={handleChange}
+            />
+          </label>
+          <label>
+            Rôle
+            <input
+              className={inputStyle}
+              type="text"
+              name="role"
+              placeholder="Rôle"
+              value={form.role}
+              onChange={handleChange}
+            />
+          </label>
           <button className={buttonStyle} type="submit">
             Ajouter
           </button>
