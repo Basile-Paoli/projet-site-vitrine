@@ -69,7 +69,7 @@ const EmployeeManagement = () => {
       <h2 className="text-3xl sm:text-4xl font-extrabold mb-6 text-center">
         Gestion des employés
       </h2>
-      <div className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-md p-6 rounded-xl mb-8">
+      <div className=" bg-opacity-10 backdrop-filter backdrop-blur-md p-6 rounded-xl mb-8">
         <form onSubmit={handleAdd} className="flex flex-col gap-4">
           <label>
             Nom
@@ -98,7 +98,7 @@ const EmployeeManagement = () => {
           </button>
         </form>
       </div>
-      <div className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-md p-6 rounded-xl">
+      <div className=" bg-opacity-10 backdrop-filter backdrop-blur-md p-6 rounded-xl">
         <ul className="space-y-4">
           {(employees ?? []).map((emp) => (
             <li

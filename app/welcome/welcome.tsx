@@ -1,6 +1,12 @@
 import sessions from "../datas/sessions.json";
 import { SessionCard } from "./SessionCard";
-import { FaPaintBrush, FaGem, FaHeadphones, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
+import {
+  FaPaintBrush,
+  FaGem,
+  FaHeadphones,
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+} from "react-icons/fa";
 
 export function Welcome() {
   return (
@@ -17,9 +23,12 @@ export function Welcome() {
               <FaPaintBrush aria-label="Thèmes" className="text-4xl " />
             </div>
             <div className="bg-white dark:bg-gray-700 bg-opacity-10 backdrop-filter backdrop-blur-md p-6 rounded-xl">
-              <h2 className="text-2xl font-semibold mb-2">Explorez des univers inédits</h2>
+              <h2 className="text-2xl font-semibold mb-2">
+                Explorez des univers inédits
+              </h2>
               <p className="text-base leading-relaxed">
-                Plongez dans des aventures artistiques et mystérieuses, où chaque scénario repousse les limites de l'imagination.
+                Plongez dans des aventures artistiques et mystérieuses, où
+                chaque scénario repousse les limites de l'imagination.
               </p>
             </div>
           </div>
@@ -28,9 +37,12 @@ export function Welcome() {
               <FaGem aria-label="Expérience" className="text-4xl " />
             </div>
             <div className="bg-white dark:bg-gray-700 bg-opacity-10 backdrop-filter backdrop-blur-md p-6 rounded-xl">
-              <h2 className="text-2xl font-semibold mb-2">Vivez une aventure sans pareil</h2>
+              <h2 className="text-2xl font-semibold mb-2">
+                Vivez une aventure sans pareil
+              </h2>
               <p className="text-base leading-relaxed">
-                Laissez-vous emporter par des décors époustouflants et des récits captivants qui vous feront vibrer à chaque instant.
+                Laissez-vous emporter par des décors époustouflants et des
+                récits captivants qui vous feront vibrer à chaque instant.
               </p>
             </div>
           </div>
@@ -39,16 +51,21 @@ export function Welcome() {
               <FaHeadphones aria-label="Sensoriel" className="text-4xl " />
             </div>
             <div className="bg-white dark:bg-gray-700 bg-opacity-10 backdrop-filter backdrop-blur-md p-6 rounded-xl">
-              <h2 className="text-2xl font-semibold mb-2">Éveillez vos émotions</h2>
+              <h2 className="text-2xl font-semibold mb-2">
+                Éveillez vos émotions
+              </h2>
               <p className="text-base leading-relaxed">
-                Une expérience sensorielle complète qui sollicite et réveille tous vos sens pour un voyage inoubliable.
+                Une expérience sensorielle complète qui sollicite et réveille
+                tous vos sens pour un voyage inoubliable.
               </p>
             </div>
           </div>
         </div>
-        <div className="text-center bg-white dark:bg-gray-700 bg-opacity-10 backdrop-filter backdrop-blur-md p-01 rounded-xl">
-          <div className="col-span-full my-6">
-            <h2 className="text-3xl font-bold">Venez vous mesurer au défi Maison Horrifique !</h2>
+        <div className="text-center bg-white dark:bg-gray-700 bg-opacity-10 backdrop-filter backdrop-blur-md p-8 mt-4 rounded-xl">
+          <div className="col-span-full mb-6">
+            <h2 className="text-3xl font-bold">
+              Venez vous mesurer au défi Maison Horrifique !
+            </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div>
