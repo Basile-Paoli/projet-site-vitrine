@@ -1,3 +1,5 @@
+npx json-server --watch db.json --port 3001
+
 # Welcome to React Router!
 
 A modern, production-ready template for building full-stack React applications using React Router.

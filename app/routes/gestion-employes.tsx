@@ -2,29 +2,29 @@ import { useEffect, useState } from "react";
 import type { Employee } from "../../types/Employee";
 import { buttonStyle, inputStyle } from "~/styles";
 
-let mockEmployees: Employee[] = [
-  { id: 1, name: "Alice", role: "Employe" },
-  { id: 2, name: "Bob", role: "Employe" },
-  { id: 3, name: "Charlie", role: "Employe" },
-];
-
-const getEmployees = (): Employee[] => {
-  return [...mockEmployees];
+const getEmployees = async (): Promise<Employee[]> => {
+  const response = await fetch("http://localhost:8080/employees");
+  if (!response.ok) throw new Error("Erreur lors de la récupération des employés");
+  return await response.json() as Employee[];
 };
 
-const addEmployee = (employee: { name: string; role: string }) => {
-  const newId =
-    mockEmployees.length > 0
-      ? Math.max(...mockEmployees.map((e) => e.id)) + 1
-      : 1;
-  const newEmployee = { id: newId, name: employee.name, role: employee.role };
-  mockEmployees.push(newEmployee);
-  return newEmployee;
+const addEmployee = async (employee: { name: string; role: string }) => {
+  const response = await fetch("http://localhost:8080/employees", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(employee),
+  });
+  if (!response.ok) throw new Error("Erreur lors de l'ajout de l'employé");
+  return await response.json();
 };
 
-const deleteEmployee = (id: number) => {
-  mockEmployees = mockEmployees.filter((e) => e.id !== id);
-  return true;
+const deleteEmployee = async (id: number) => {
+  const response = await fetch(`http://localhost:8080/employees/${id}`, {
+    method: "DELETE",
+  });
+  return response.ok;
 };
 
 const EmployeeManagement = () => {
@@ -32,7 +32,7 @@ const EmployeeManagement = () => {
   const [form, setForm] = useState({ name: "", role: "" });
 
   useEffect(() => {
-    refreshEmployees();
+    getEmployees().then(setEmployees).catch(console.error);
   }, []);
 
   const refreshEmployees = () => {
@@ -47,18 +47,18 @@ const EmployeeManagement = () => {
     });
   };
 
-  const handleAdd = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleAdd = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (form.name && form.role) {
-      addEmployee({ ...form });
+      await addEmployee({ ...form });
       setForm({ name: "", role: "" });
-      refreshEmployees();
+      getEmployees().then(setEmployees).catch(console.error);
     }
   };
 
-  const handleDelete = (id: number) => {
-    deleteEmployee(id);
-    refreshEmployees();
+  const handleDelete = async (id: number) => {
+    await deleteEmployee(id);
+    getEmployees().then(setEmployees).catch(console.error);
   };
 
   return (

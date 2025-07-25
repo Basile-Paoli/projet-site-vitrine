@@ -11,8 +11,8 @@ export function Footer() {
                     {data
                         .sort((a, b) => a.id - b.id)
                         .map((session) => (
-                            <ul className="text-sm mb-2">
-                                <li key={session.id}>
+                            <ul className="text-sm mb-2" key={session.id}>
+                                <li>
                                     <a href={`/sessions/${session.id}`} className="hover:text-blue-500 transition-colors">
                                         {session.nom}
                                     </a>
