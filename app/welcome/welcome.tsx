@@ -5,7 +5,7 @@ import { FaPaintBrush, FaGem, FaHeadphones, FaMapMarkerAlt, FaPhoneAlt } from "r
 export function Welcome() {
   return (
     <>
-      <div className="container mx-auto py-16 text-black px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto py-16  px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-center">
           <div className="col-span-full mb-4">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6">
@@ -14,9 +14,9 @@ export function Welcome() {
           </div>
           <div>
             <div className="flex justify-center items-center mb-4">
-              <FaPaintBrush aria-label="Thèmes" className="text-4xl text-black" />
+              <FaPaintBrush aria-label="Thèmes" className="text-4xl " />
             </div>
-            <div className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-md p-6 rounded-xl">
+            <div className="bg-white dark:bg-gray-700 bg-opacity-10 backdrop-filter backdrop-blur-md p-6 rounded-xl">
               <h2 className="text-2xl font-semibold mb-2">Explorez des univers inédits</h2>
               <p className="text-base leading-relaxed">
                 Plongez dans des aventures artistiques et mystérieuses, où chaque scénario repousse les limites de l'imagination.
@@ -25,9 +25,9 @@ export function Welcome() {
           </div>
           <div>
             <div className="flex justify-center items-center mb-4">
-              <FaGem aria-label="Expérience" className="text-4xl text-black" />
+              <FaGem aria-label="Expérience" className="text-4xl " />
             </div>
-            <div className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-md p-6 rounded-xl">
+            <div className="bg-white dark:bg-gray-700 bg-opacity-10 backdrop-filter backdrop-blur-md p-6 rounded-xl">
               <h2 className="text-2xl font-semibold mb-2">Vivez une aventure sans pareil</h2>
               <p className="text-base leading-relaxed">
                 Laissez-vous emporter par des décors époustouflants et des récits captivants qui vous feront vibrer à chaque instant.
@@ -36,9 +36,9 @@ export function Welcome() {
           </div>
           <div>
             <div className="flex justify-center items-center mb-4">
-              <FaHeadphones aria-label="Sensoriel" className="text-4xl text-black" />
+              <FaHeadphones aria-label="Sensoriel" className="text-4xl " />
             </div>
-            <div className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-md p-6 rounded-xl">
+            <div className="bg-white dark:bg-gray-700 bg-opacity-10 backdrop-filter backdrop-blur-md p-6 rounded-xl">
               <h2 className="text-2xl font-semibold mb-2">Éveillez vos émotions</h2>
               <p className="text-base leading-relaxed">
                 Une expérience sensorielle complète qui sollicite et réveille tous vos sens pour un voyage inoubliable.
@@ -46,7 +46,7 @@ export function Welcome() {
             </div>
           </div>
         </div>
-        <div className="text-center bg-white bg-opacity-10 backdrop-filter backdrop-blur-md p-01 rounded-xl">
+        <div className="text-center bg-white dark:bg-gray-700 bg-opacity-10 backdrop-filter backdrop-blur-md p-01 rounded-xl">
           <div className="col-span-full my-6">
             <h2 className="text-3xl font-bold">Venez vous mesurer au défi Maison Horrifique !</h2>
           </div>
@@ -71,7 +71,7 @@ export function Welcome() {
           <SessionCard key={session.id} session={session} />
         ))}
       </div>
-      <div className="mt-12 p-6 bg-white/10 backdrop-blur-md rounded-xl text-center">
+      <div className="mt-12 p-6 bg-white dark:bg-gray-700/10 backdrop-blur-md rounded-xl text-center">
         <h3 className="text-2xl font-bold mb-6">Où nous trouver ?</h3>
         <div className="flex items-center justify-center space-x-3 mb-4">
           <div>

@@ -4,8 +4,8 @@ import data from "~/datas/sessions.json";
 
 export function Footer() {
     return (
-        <footer className="w-full bottom-0 left-0 right-0 flex flex-col items-center justify-center p-4 bg-gray-200 border-t">
-            <div className="w-full max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6 text-gray-700">
+        <footer className="w-full bottom-0 left-0 right-0 flex flex-col items-center justify-center p-4 bg-gray-200 dark:bg-gray-700 border-t">
+            <div className="w-full max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6 text-gray-700 dark:text-gray-300">
                 <div>
                     <h2 className="text-xl font-bold mb-3 border-b-2 border-gray-300 pb-1">Nos missions</h2>
                     {data

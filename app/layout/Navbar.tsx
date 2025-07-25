@@ -1,16 +1,22 @@
 import { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router";
 import sessions from "../datas/sessions.json";
+import { ThemeSwitch } from "~/components/theme-switch";
 
 const linkStyles = ({ isActive }: { isActive: boolean }) =>
-  "cursor-pointer px-3 py-2 rounded transition-colors duration-200 " +
-  (isActive ? "text-blue-500" : "text-gray-700");
+  "cursor-pointer px-3 py-2 rounded transition-colors duration-200" +
+  (isActive
+    ? "text-blue-500 dark:text-blue-400"
+    : "text-gray-700 dark:text-gray-300");
 
 export function Navbar() {
   return (
-    <header className="flex items-center p-4 justify-between w-full bg-gray-200 border-b">
-      <NavLink to="/" className="break-words w-32">LA MAISON HORRIFIQUE</NavLink>
+    <header className="flex items-center p-4 justify-between w-full bg-gray-200 dark:bg-gray-700 border-b">
+      <NavLink to="/" className="break-words w-32">
+        LA MAISON HORRIFIQUE
+      </NavLink>
       <div className="flex items-center gap-4">
+        <ThemeSwitch />
         <SessionDropdown />
         <GestionDropdown />
         <NavLink to="/reservation" className={linkStyles}>
@@ -47,7 +53,7 @@ function SessionDropdown() {
         Session
       </button>
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-20 min-w-fit bg-white border rounded shadow-lg">
+        <div className="absolute right-0 mt-2 w-20 min-w-fit bg-white dark:bg-gray-700 border rounded shadow-lg">
           <ul className="py-1">
             {links.map((link) => (
               <li key={link.name}>
@@ -82,11 +88,14 @@ function GestionDropdown() {
 
   return (
     <div className="relative">
-      <button onClick={toggleDropdown} className={linkStyles({ isActive: false })}>
+      <button
+        onClick={toggleDropdown}
+        className={linkStyles({ isActive: false })}
+      >
         Gestion
       </button>
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-28 min-w-fit bg-white border rounded shadow-lg">
+        <div className="absolute right-0 mt-2 w-28 min-w-fit bg-white dark:bg-gray-700 border rounded shadow-lg">
           <ul className="py-1">
             {links.map((link) => (
               <li key={link.name}>
