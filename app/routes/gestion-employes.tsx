@@ -2,14 +2,16 @@ import { useEffect, useState } from "react";
 import type { Employee } from "../../types/Employee";
 import { buttonStyle, inputStyle } from "~/styles";
 
+const employeeApiUrl = "http://localhost:8080/employees";
+
 const getEmployees = async (): Promise<Employee[]> => {
-  const response = await fetch("http://localhost:8080/employees");
+  const response = await fetch(employeeApiUrl);
   if (!response.ok) throw new Error("Erreur lors de la récupération des employés");
   return await response.json() as Employee[];
 };
 
 const addEmployee = async (employee: { name: string; role: string }) => {
-  const response = await fetch("http://localhost:8080/employees", {
+  const response = await fetch(employeeApiUrl, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -21,7 +23,7 @@ const addEmployee = async (employee: { name: string; role: string }) => {
 };
 
 const deleteEmployee = async (id: number) => {
-  const response = await fetch(`http://localhost:8080/employees/${id}`, {
+  const response = await fetch(`${employeeApiUrl}/${id}`, {
     method: "DELETE",
   });
   return response.ok;
